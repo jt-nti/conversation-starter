@@ -1,0 +1,454 @@
+{
+  "name": "Basic",
+  "intents": [
+    {
+      "intent": "cs-goodbye",
+      "examples": [
+        {
+          "text": "adieu"
+        },
+        {
+          "text": "adios"
+        },
+        {
+          "text": "au revoir"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "bye now"
+        },
+        {
+          "text": "cya"
+        },
+        {
+          "text": "farewell"
+        },
+        {
+          "text": "goodbye"
+        },
+        {
+          "text": "good bye"
+        },
+        {
+          "text": "good day"
+        },
+        {
+          "text": "good night"
+        },
+        {
+          "text": "gotta go"
+        },
+        {
+          "text": "gotta run"
+        },
+        {
+          "text": "got to go"
+        },
+        {
+          "text": "gtg"
+        },
+        {
+          "text": "have to go"
+        },
+        {
+          "text": "have to leave"
+        },
+        {
+          "text": "have to run"
+        },
+        {
+          "text": "I'm leaving"
+        },
+        {
+          "text": "I'm off"
+        },
+        {
+          "text": "kthxbai"
+        },
+        {
+          "text": "kthxbye"
+        },
+        {
+          "text": "later"
+        },
+        {
+          "text": "laters"
+        },
+        {
+          "text": "logging off"
+        },
+        {
+          "text": "my time is up"
+        },
+        {
+          "text": "need to go"
+        },
+        {
+          "text": "need to leave"
+        },
+        {
+          "text": "need to run"
+        },
+        {
+          "text": "ok bye"
+        },
+        {
+          "text": "out of time"
+        },
+        {
+          "text": "over and out"
+        },
+        {
+          "text": "see ya"
+        },
+        {
+          "text": "see ya later"
+        },
+        {
+          "text": "see ya soon"
+        },
+        {
+          "text": "see you"
+        },
+        {
+          "text": "see you later"
+        },
+        {
+          "text": "see you soon"
+        },
+        {
+          "text": "should be going"
+        },
+        {
+          "text": "should go"
+        },
+        {
+          "text": "signing off"
+        },
+        {
+          "text": "signing out"
+        },
+        {
+          "text": "so long"
+        },
+        {
+          "text": "thanks, bye"
+        },
+        {
+          "text": "thank you, bye"
+        },
+        {
+          "text": "then bye"
+        },
+        {
+          "text": "time to go"
+        },
+        {
+          "text": "toodles"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "cs-hello",
+      "examples": [
+        {
+          "text": "afternoon"
+        },
+        {
+          "text": "aloha"
+        },
+        {
+          "text": "bonjour"
+        },
+        {
+          "text": "buenos dias"
+        },
+        {
+          "text": "ciao"
+        },
+        {
+          "text": "g'day"
+        },
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "greetings"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hello, how are you?"
+        },
+        {
+          "text": "hey"
+        },
+        {
+          "text": "heya"
+        },
+        {
+          "text": "hey there"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "hi how are u"
+        },
+        {
+          "text": "hi there"
+        },
+        {
+          "text": "hiya"
+        },
+        {
+          "text": "Hola"
+        },
+        {
+          "text": "How are you doing?"
+        },
+        {
+          "text": "howdy"
+        },
+        {
+          "text": "morning"
+        },
+        {
+          "text": "yo"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "cs-help",
+      "examples": [
+        {
+          "text": "help"
+        },
+        {
+          "text": "help me"
+        },
+        {
+          "text": "How are you going to help me?"
+        },
+        {
+          "text": "how can you help me"
+        },
+        {
+          "text": "need help"
+        },
+        {
+          "text": "tell me what things you can do"
+        },
+        {
+          "text": "tell me what you can do"
+        },
+        {
+          "text": "What are you"
+        },
+        {
+          "text": "what are you capable of"
+        },
+        {
+          "text": "what are your capabilities Watson?"
+        },
+        {
+          "text": "what can I do"
+        },
+        {
+          "text": "What can i say"
+        },
+        {
+          "text": "what can you do"
+        },
+        {
+          "text": "what can you do for me"
+        },
+        {
+          "text": "what can you help me with"
+        },
+        {
+          "text": "what do you know"
+        },
+        {
+          "text": "what things can you do"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "cs-no",
+      "examples": [
+        {
+          "text": "definitely not"
+        },
+        {
+          "text": "never"
+        },
+        {
+          "text": "no"
+        },
+        {
+          "text": "no no no"
+        },
+        {
+          "text": "no not at all"
+        },
+        {
+          "text": "no not really"
+        },
+        {
+          "text": "no thanks"
+        },
+        {
+          "text": "no thank you"
+        },
+        {
+          "text": "not likely"
+        },
+        {
+          "text": "no way"
+        },
+        {
+          "text": "of course not"
+        },
+        {
+          "text": "you must be kidding!"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "cs-thankyou",
+      "examples": [
+        {
+          "text": "cheers"
+        },
+        {
+          "text": "kthx"
+        },
+        {
+          "text": "much obliged"
+        },
+        {
+          "text": "ta"
+        },
+        {
+          "text": "ta very much"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "thanks a lot"
+        },
+        {
+          "text": "thankyou"
+        },
+        {
+          "text": "thank you"
+        },
+        {
+          "text": "that's great, thanks"
+        },
+        {
+          "text": "thx"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "cs-yes",
+      "examples": [
+        {
+          "text": "absolutely"
+        },
+        {
+          "text": "agreed"
+        },
+        {
+          "text": "correct"
+        },
+        {
+          "text": "definitely"
+        },
+        {
+          "text": "for sure"
+        },
+        {
+          "text": "I agree"
+        },
+        {
+          "text": "no problem"
+        },
+        {
+          "text": "ok"
+        },
+        {
+          "text": "okay"
+        },
+        {
+          "text": "right"
+        },
+        {
+          "text": "sure"
+        },
+        {
+          "text": "sure thing"
+        },
+        {
+          "text": "yeah"
+        },
+        {
+          "text": "yes"
+        }
+      ],
+      "description": null
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "description": "Basic starter workspace with intents and a conversation start dialog node",
+  "dialog_nodes": [
+    {
+      "go_to": null,
+      "output": null,
+      "parent": null,
+      "context": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_2_1470861288333",
+      "previous_sibling": "node_1_1470861242516"
+    },
+    {
+      "go_to": null,
+      "output": {
+        "text": {
+          "values": [
+            "Hello.",
+            "Hi.",
+            "Hey there!"
+          ]
+        },
+        "append": false,
+        "selection_policy": "random"
+      },
+      "parent": null,
+      "context": null,
+      "conditions": "conversation_start",
+      "description": null,
+      "dialog_node": "node_1_1470861242516",
+      "previous_sibling": null
+    }
+  ]
+}
