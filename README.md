@@ -33,5 +33,5 @@ I used the following `jq` command to remove some of the unnecessary content from
 workspaces ready for sharing:
 
 ```
-jq 'recurse(.intents[]?, .examples[]?, .entities[]?, .dialog_nodes[]?) |= del(.created, .created_by, .metadata, .modified, .modified_by, .workspace_id)' < exported-workspace.json > workspace.json
+jq 'recurse(.intents[]?, .examples[]?, .entities[]?, .dialog_nodes[]?, .values[]?) |= del(.created, .created_by, .metadata, .updated, .modified_by, .workspace_id)' < exported-workspace.json > workspace.json
 ```

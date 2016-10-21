@@ -1,0 +1,108 @@
+{
+  "name": "System Entity Demo",
+  "intents": [],
+  "entities": [
+    {
+      "type": null,
+      "entity": "sys-currency",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "sys-number",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "sys-percentage",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    }
+  ],
+  "language": "en",
+  "description": "Turn on System Entities!",
+  "dialog_nodes": [
+    {
+      "go_to": null,
+      "output": {
+        "text": "How many system entities are there?"
+      },
+      "parent": null,
+      "context": null,
+      "conditions": "conversation_start",
+      "description": null,
+      "dialog_node": "node_1_1477078171616",
+      "previous_sibling": null
+    },
+    {
+      "go_to": null,
+      "output": {
+        "text": "More than @sys-number.numeric_value!"
+      },
+      "parent": "node_6_1477080182570",
+      "context": null,
+      "conditions": "@sys-number.numeric_value < 3",
+      "description": null,
+      "dialog_node": "node_4_1477078389663",
+      "previous_sibling": "node_3_1477078341575"
+    },
+    {
+      "go_to": null,
+      "output": {
+        "text": "No, not as many as @sys-number.numeric_value!"
+      },
+      "parent": "node_6_1477080182570",
+      "context": null,
+      "conditions": "@sys-number.numeric_value > 3",
+      "description": null,
+      "dialog_node": "node_3_1477078341575",
+      "previous_sibling": null
+    },
+    {
+      "go_to": null,
+      "output": {
+        "text": "Yes, there are @sys-number.numeric_value! You can now use \\@sys-currency, \\@sys-percentage and \\@sys-number but you need to enable them first!"
+      },
+      "parent": "node_6_1477080182570",
+      "context": null,
+      "conditions": "@sys-number.numeric_value == 3",
+      "description": null,
+      "dialog_node": "node_5_1477078422208",
+      "previous_sibling": "node_4_1477078389663"
+    },
+    {
+      "go_to": null,
+      "output": {
+        "text": "You don't have system entities turned on yet do you?!"
+      },
+      "parent": null,
+      "context": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_2_1477078181307",
+      "previous_sibling": "node_6_1477080182570"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_3_1477078341575"
+      },
+      "output": {},
+      "parent": null,
+      "context": null,
+      "conditions": "@sys-number",
+      "description": null,
+      "dialog_node": "node_6_1477080182570",
+      "previous_sibling": "node_1_1477078171616"
+    }
+  ]
+}
