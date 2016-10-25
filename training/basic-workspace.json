@@ -416,19 +416,219 @@
       "description": null
     }
   ],
-  "entities": [],
+  "entities": [
+    {
+      "type": null,
+      "entity": "cs-day",
+      "source": null,
+      "values": [
+        {
+          "value": "today",
+          "synonyms": []
+        },
+        {
+          "value": "tomorrow",
+          "synonyms": []
+        },
+        {
+          "value": "yesterday",
+          "synonyms": []
+        }
+      ],
+      "open_list": null,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "cs-month",
+      "source": null,
+      "values": [
+        {
+          "value": "April",
+          "synonyms": [
+            "Apr"
+          ]
+        },
+        {
+          "value": "August",
+          "synonyms": [
+            "Aug"
+          ]
+        },
+        {
+          "value": "December",
+          "synonyms": [
+            "Dec"
+          ]
+        },
+        {
+          "value": "February",
+          "synonyms": [
+            "Feb"
+          ]
+        },
+        {
+          "value": "January",
+          "synonyms": [
+            "Jan"
+          ]
+        },
+        {
+          "value": "July",
+          "synonyms": []
+        },
+        {
+          "value": "June",
+          "synonyms": []
+        },
+        {
+          "value": "March",
+          "synonyms": [
+            "Mar"
+          ]
+        },
+        {
+          "value": "May",
+          "synonyms": []
+        },
+        {
+          "value": "November",
+          "synonyms": [
+            "Nov"
+          ]
+        },
+        {
+          "value": "October",
+          "synonyms": [
+            "Oct"
+          ]
+        },
+        {
+          "value": "September",
+          "synonyms": [
+            "Sept"
+          ]
+        }
+      ],
+      "open_list": null,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "cs-weekday",
+      "source": null,
+      "values": [
+        {
+          "value": "Friday",
+          "synonyms": [
+            "Fri"
+          ]
+        },
+        {
+          "value": "Monday",
+          "synonyms": [
+            "Mon"
+          ]
+        },
+        {
+          "value": "Saturday",
+          "synonyms": [
+            "Sat"
+          ]
+        },
+        {
+          "value": "Sunday",
+          "synonyms": [
+            "Sun"
+          ]
+        },
+        {
+          "value": "Thursday",
+          "synonyms": [
+            "Thur",
+            "Thurs"
+          ]
+        },
+        {
+          "value": "Tuesday",
+          "synonyms": [
+            "Tue",
+            "Tues"
+          ]
+        },
+        {
+          "value": "Wednesday",
+          "synonyms": [
+            "Wed"
+          ]
+        }
+      ],
+      "open_list": null,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "sys-currency",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "sys-number",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "sys-percentage",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    }
+  ],
   "language": "en",
-  "description": "Basic starter workspace with intents and a conversation start dialog node",
+  "description": "Basic starter workspace with intents and a conversation start dialog node - https://github.com/jthub/conversation-starter",
   "dialog_nodes": [
     {
       "go_to": null,
-      "output": null,
+      "output": {
+        "text": "I'm sorry, I don't understand"
+      },
+      "parent": null,
+      "context": null,
+      "conditions": "intents.size() > 0 && intents.confidence < 0.6",
+      "description": null,
+      "dialog_node": "node_1_1477346786044",
+      "previous_sibling": "node_1_1470861242516"
+    },
+    {
+      "go_to": null,
+      "output": {
+        "text": "Sorry, I do not have a response for any \\#intents or \\@entities that I recognised."
+      },
       "parent": null,
       "context": null,
       "conditions": "anything_else",
       "description": null,
       "dialog_node": "node_2_1470861288333",
-      "previous_sibling": "node_1_1470861242516"
+      "previous_sibling": "node_5_1477347090926"
+    },
+    {
+      "go_to": null,
+      "output": {
+        "text": "Sorry, I'm not sure I understand"
+      },
+      "parent": null,
+      "context": null,
+      "conditions": "intents.size() > 0 && intents.confidence < 0.8",
+      "description": null,
+      "dialog_node": "node_5_1477347090926",
+      "previous_sibling": "node_1_1477346786044"
     },
     {
       "go_to": null,
