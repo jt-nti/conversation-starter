@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<section class="home-content">
+  
+  <div class="wrapper">
+    {{ content }}
+  </div>
+
+</section>
+
+<section class="steps">
+
+  <div class="wrapper">
+    {% assign ordered_steps = site.steps | sort: 'step' %}
+    {% for step in ordered_steps %}
+    {{ step.output }}
+    {% endfor %}
+  </div>
+
+</section>
