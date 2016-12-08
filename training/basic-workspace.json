@@ -576,6 +576,14 @@
     },
     {
       "type": null,
+      "entity": "sys-date",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
       "entity": "sys-number",
       "source": "system.entities",
       "values": [],
@@ -585,6 +593,14 @@
     {
       "type": null,
       "entity": "sys-percentage",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "sys-time",
       "source": "system.entities",
       "values": [],
       "open_list": false,

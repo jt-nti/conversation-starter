@@ -12,6 +12,14 @@
     },
     {
       "type": null,
+      "entity": "sys-date",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
       "entity": "sys-number",
       "source": "system.entities",
       "values": [],
@@ -21,6 +29,14 @@
     {
       "type": null,
       "entity": "sys-percentage",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "sys-time",
       "source": "system.entities",
       "values": [],
       "open_list": false,
@@ -49,7 +65,7 @@
       },
       "parent": "node_6_1477080182570",
       "context": null,
-      "conditions": "@sys-number.numeric_value < 3",
+      "conditions": "@sys-number.numeric_value < 5",
       "description": null,
       "dialog_node": "node_4_1477078389663",
       "previous_sibling": "node_3_1477078341575"
@@ -61,7 +77,7 @@
       },
       "parent": "node_6_1477080182570",
       "context": null,
-      "conditions": "@sys-number.numeric_value > 3",
+      "conditions": "@sys-number.numeric_value > 5",
       "description": null,
       "dialog_node": "node_3_1477078341575",
       "previous_sibling": null
@@ -69,11 +85,11 @@
     {
       "go_to": null,
       "output": {
-        "text": "Yes, there are @sys-number.numeric_value! You can now use \\@sys-currency, \\@sys-percentage and \\@sys-number but you need to enable them first!"
+        "text": "Yes, there are @sys-number.numeric_value! You can now use \\@sys-time, \\@sys-date, \\@sys-currency, \\@sys-percentage and \\@sys-number but you need to enable them first!"
       },
       "parent": "node_6_1477080182570",
       "context": null,
-      "conditions": "@sys-number.numeric_value == 3",
+      "conditions": "@sys-number.numeric_value == 5",
       "description": null,
       "dialog_node": "node_5_1477078422208",
       "previous_sibling": "node_4_1477078389663"
