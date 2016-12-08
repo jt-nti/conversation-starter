@@ -4,23 +4,14 @@ title: Okay, sign me up for Bluemix
 step: 2
 ---
 
-Bluewhat?!
+All the [Watson Developer Cloud services](https://www.ibm.com/watson/developercloud/services-catalog.html)
+are managed and billed via Bluemix so if you don't already have an account,
+you'll need to [sign up for a free 30 day Bluemix trial](https://console.ng.bluemix.net/registration/?target=/catalog/%3fcategory=watson).
 
-___
+Bluemix is IBM's cloud offering, which you can also use to bring your cognitive
+applications to life. If you're new to Bluemix or Watson, the Watson Developer
+Cloud [Getting Started](https://www.ibm.com/watson/developercloud/doc/getting_started/)
+documentation is a good place to begin.
 
-
-*To be continued...*
-
-Likely/possible next steps, after writing the Bluemix step that is!
-
-- Creating a Conversation service
-- Intents
-- Entities (including turning on all the system entities!)
-- Dialog
-- Testing
-- Linking to Slack/Facebook/Friendface
-- Integrating with other services
-- Finding help
-
-Plus an about page, other resources and examples.
-Comments, suggestions, links and pull requests always welcome!
+Don't worry if you don't want to use Bluemix though; once you've created a
+Conversation service you can call it from anywhere.
