@@ -1,0 +1,1074 @@
+{
+	"name": "FlightPredict",
+	"created": "2016-12-09T18:16:44.008Z",
+	"intents": [{
+		"intent": "departing",
+		"created": "2016-12-09T18:16:44.008Z",
+		"updated": "2016-12-09T18:16:44.008Z",
+		"examples": [{
+			"text": "I am departing from JFK",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}, {
+			"text": "I am leaving from BOS",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}, {
+			"text": "I am leaving tomorrow at 10",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}, {
+			"text": "I fly from London",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}, {
+			"text": "I leave from Dublin",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}, {
+			"text": "My departure airport is PSG",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}],
+		"description": null
+	}, {
+		"intent": "destination",
+		"created": "2016-12-09T18:16:44.008Z",
+		"updated": "2016-12-09T18:16:44.008Z",
+		"examples": [{
+			"text": "I am flying to London",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}, {
+			"text": "I am flying with Delta to Orlando",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}, {
+			"text": "I am going to JFK",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}, {
+			"text": "I fly to Paris tonight at 10",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}, {
+			"text": "I go to Rome this afternoon",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}, {
+			"text": "I will be arriving in Paris tomorrow",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}, {
+			"text": "My destination is Dublin",
+			"created": "2016-12-09T18:16:44.008Z",
+			"updated": "2016-12-09T18:16:44.008Z"
+		}],
+		"description": null
+	}, {
+		"intent": "flight_info",
+		"created": "2016-12-09T18:21:25.858Z",
+		"updated": "2016-12-09T18:21:25.858Z",
+		"examples": [{
+			"text": "Am I on a Boeing or Airbus",
+			"created": "2016-12-09T18:21:25.858Z",
+			"updated": "2016-12-09T18:21:25.858Z"
+		}, {
+			"text": "How many passengers are on the flight",
+			"created": "2016-12-09T18:21:25.858Z",
+			"updated": "2016-12-09T18:21:25.858Z"
+		}, {
+			"text": "What model aircraft is that",
+			"created": "2016-12-09T18:21:25.858Z",
+			"updated": "2016-12-09T18:21:25.858Z"
+		}, {
+			"text": "What type of plane is it",
+			"created": "2016-12-09T18:21:25.858Z",
+			"updated": "2016-12-09T18:21:25.858Z"
+		}, {
+			"text": "What type of plane will I be on",
+			"created": "2016-12-09T18:21:25.858Z",
+			"updated": "2016-12-09T18:21:25.858Z"
+		}],
+		"description": null
+	}, {
+		"intent": "locate_amenity",
+		"created": "2016-12-10T03:24:33.531Z",
+		"updated": "2016-12-10T03:27:23.800Z",
+		"examples": [{
+			"text": "any decent places to eat there",
+			"created": "2016-12-10T03:26:05.029Z",
+			"updated": "2016-12-10T03:26:05.029Z"
+		}, {
+			"text": "are there any good restaurants there?",
+			"created": "2016-12-10T03:25:39.784Z",
+			"updated": "2016-12-10T03:25:39.784Z"
+		}, {
+			"text": "Can you find a restaurant for me",
+			"created": "2016-12-10T03:24:56.470Z",
+			"updated": "2016-12-10T03:24:56.470Z"
+		}, {
+			"text": "Can you make a reservation for me there?",
+			"created": "2016-12-10T03:25:11.006Z",
+			"updated": "2016-12-10T03:25:11.006Z"
+		}, {
+			"text": "I'd like to reserve a table for tomorrow",
+			"created": "2016-12-10T03:27:23.800Z",
+			"updated": "2016-12-10T03:27:23.800Z"
+		}],
+		"description": null
+	}, {
+		"intent": "no",
+		"created": "2016-12-12T20:46:50.341Z",
+		"updated": "2016-12-12T20:46:50.341Z",
+		"examples": [{
+			"text": "nadda",
+			"created": "2016-12-12T20:46:50.341Z",
+			"updated": "2016-12-12T20:46:50.341Z"
+		}, {
+			"text": "nah",
+			"created": "2016-12-12T20:46:50.341Z",
+			"updated": "2016-12-12T20:46:50.341Z"
+		}, {
+			"text": "negative",
+			"created": "2016-12-12T20:46:50.341Z",
+			"updated": "2016-12-12T20:46:50.341Z"
+		}, {
+			"text": "no",
+			"created": "2016-12-12T20:46:50.341Z",
+			"updated": "2016-12-12T20:46:50.341Z"
+		}, {
+			"text": "nope",
+			"created": "2016-12-12T20:46:50.341Z",
+			"updated": "2016-12-12T20:46:50.341Z"
+		}],
+		"description": null
+	}, {
+		"intent": "other_passengers",
+		"created": "2016-12-10T03:23:57.267Z",
+		"updated": "2016-12-10T03:23:57.267Z",
+		"examples": [{
+			"text": "anyone I know going on the same plane",
+			"created": "2016-12-10T03:23:57.267Z",
+			"updated": "2016-12-10T03:23:57.267Z"
+		}, {
+			"text": "are else is traveling with me",
+			"created": "2016-12-10T03:23:57.267Z",
+			"updated": "2016-12-10T03:23:57.267Z"
+		}, {
+			"text": "are other folks from here on the flight",
+			"created": "2016-12-10T03:23:57.267Z",
+			"updated": "2016-12-10T03:23:57.267Z"
+		}, {
+			"text": "who else is on the flight",
+			"created": "2016-12-10T03:23:57.267Z",
+			"updated": "2016-12-10T03:23:57.267Z"
+		}],
+		"description": null
+	}, {
+		"intent": "predict",
+		"created": "2016-12-14T02:03:30.839Z",
+		"updated": "2016-12-14T02:03:30.839Z",
+		"examples": [{
+			"text": "do you think I will be late",
+			"created": "2016-12-14T02:03:30.839Z",
+			"updated": "2016-12-14T02:03:30.839Z"
+		}, {
+			"text": "how late do you think I will be",
+			"created": "2016-12-14T02:03:30.839Z",
+			"updated": "2016-12-14T02:03:30.839Z"
+		}, {
+			"text": "what are the odds of the flight being on time",
+			"created": "2016-12-14T02:03:30.839Z",
+			"updated": "2016-12-14T02:03:30.839Z"
+		}, {
+			"text": "will I get in early",
+			"created": "2016-12-14T02:03:30.839Z",
+			"updated": "2016-12-14T02:03:30.839Z"
+		}, {
+			"text": "will it be on time",
+			"created": "2016-12-14T02:03:30.839Z",
+			"updated": "2016-12-14T02:03:30.839Z"
+		}, {
+			"text": "Will my flight be late",
+			"created": "2016-12-14T02:03:30.839Z",
+			"updated": "2016-12-14T02:03:30.839Z"
+		}],
+		"description": null
+	}, {
+		"intent": "weather",
+		"created": "2016-12-09T18:24:19.925Z",
+		"updated": "2016-12-09T18:24:19.925Z",
+		"examples": [{
+			"text": "is it going to snow",
+			"created": "2016-12-09T18:24:19.925Z",
+			"updated": "2016-12-09T18:24:19.925Z"
+		}, {
+			"text": "What is the weather like at my destination",
+			"created": "2016-12-09T18:24:19.925Z",
+			"updated": "2016-12-09T18:24:19.925Z"
+		}, {
+			"text": "what is the weather like for tomorrow",
+			"created": "2016-12-09T18:24:19.925Z",
+			"updated": "2016-12-09T18:24:19.925Z"
+		}, {
+			"text": "What is the weather like in Boston",
+			"created": "2016-12-09T18:24:19.925Z",
+			"updated": "2016-12-09T18:24:19.925Z"
+		}, {
+			"text": "Will I need a coat",
+			"created": "2016-12-09T18:24:19.925Z",
+			"updated": "2016-12-09T18:24:19.925Z"
+		}, {
+			"text": "will I need an umbrella",
+			"created": "2016-12-09T18:24:19.925Z",
+			"updated": "2016-12-09T18:24:19.925Z"
+		}, {
+			"text": "Will it be raining in New York tomorrow?",
+			"created": "2016-12-09T18:24:19.925Z",
+			"updated": "2016-12-09T18:24:19.925Z"
+		}],
+		"description": null
+	}, {
+		"intent": "yes",
+		"created": "2016-12-12T20:46:25.545Z",
+		"updated": "2016-12-12T20:46:25.545Z",
+		"examples": [{
+			"text": "affirmative",
+			"created": "2016-12-12T20:46:25.545Z",
+			"updated": "2016-12-12T20:46:25.545Z"
+		}, {
+			"text": "correct",
+			"created": "2016-12-12T20:46:25.545Z",
+			"updated": "2016-12-12T20:46:25.545Z"
+		}, {
+			"text": "I do",
+			"created": "2016-12-12T20:46:25.545Z",
+			"updated": "2016-12-12T20:46:25.545Z"
+		}, {
+			"text": "indeed",
+			"created": "2016-12-12T20:46:25.545Z",
+			"updated": "2016-12-12T20:46:25.545Z"
+		}, {
+			"text": "yeah",
+			"created": "2016-12-12T20:46:25.545Z",
+			"updated": "2016-12-12T20:46:25.545Z"
+		}, {
+			"text": "yes",
+			"created": "2016-12-12T20:46:25.545Z",
+			"updated": "2016-12-12T20:46:25.545Z"
+		}, {
+			"text": "yup",
+			"created": "2016-12-12T20:46:25.545Z",
+			"updated": "2016-12-12T20:46:25.545Z"
+		}],
+		"description": null
+	}],
+	"updated": "2016-12-14T05:06:23.499Z",
+	"entities": [{
+		"type": null,
+		"entity": "cs-airport",
+		"source": null,
+		"values": [{
+			"value": "ATL",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Atlanta", "Georgia", "Hartsfield–Jackson Atlanta International Airport"]
+		}, {
+			"value": "AUS",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Austin", "Austin–Bergstrom International Airport", "Texas"]
+		}, {
+			"value": "BNA",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Nashville", "Nashville International Airport", "Tennessee"]
+		}, {
+			"value": "BOS",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:31.408Z",
+			"metadata": null,
+			"synonyms": ["Boston", "Logan", "Logan International Airport", "Massachusetts"]
+		}, {
+			"value": "BWI",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Baltimore–Washington International Airport", "Linthicum", "Maryland"]
+		}, {
+			"value": "CLT",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Charlotte", "Charlotte Douglas International Airport", "North Carolina"]
+		}, {
+			"value": "DAL",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Dallas", "Dallas Love Field", "Texas"]
+		}, {
+			"value": "DCA",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:41.181Z",
+			"metadata": null,
+			"synonyms": ["Arlington County", "Regan", "Ronald Reagan Washington National Airport", "Virginia"]
+		}, {
+			"value": "DEN",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Colorado", "Denver", "Denver International Airport"]
+		}, {
+			"value": "DFW",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Dallas/Fort Worth International Airport", "Dallas–Fort Worth Metroplex", "Texas"]
+		}, {
+			"value": "DTW",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:55.174Z",
+			"metadata": null,
+			"synonyms": ["Detroit", "Detroit Metropolitan Airport", "Michigan", "Romulus"]
+		}, {
+			"value": "EWR",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Newark", "Newark Liberty International Airport", "New Jersey"]
+		}, {
+			"value": "FLL",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Florida", "Fort Lauderdale", "Fort Lauderdale–Hollywood International Airport"]
+		}, {
+			"value": "HNL",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Hawaii", "Honolulu", "Honolulu International Airport"]
+		}, {
+			"value": "HOU",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Houston", "Texas", "William P. Hobby Airport"]
+		}, {
+			"value": "IAD",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Dulles", "Virginia", "Washington Dulles International Airport"]
+		}, {
+			"value": "IAH",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["George Bush Intercontinental Airport", "Houston", "Texas"]
+		}, {
+			"value": "JFK",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:37:14.384Z",
+			"metadata": null,
+			"synonyms": ["John F. Kennedy International Airport", "Kennedy", "New York"]
+		}, {
+			"value": "LAS",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Las Vegas", "McCarran International Airport", "Nevada"]
+		}, {
+			"value": "LAX",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["California", "Los Angeles", "Los Angeles International Airport"]
+		}, {
+			"value": "LGA",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:37:24.235Z",
+			"metadata": null,
+			"synonyms": ["LaGuardia", "LaGuardia Airport", "New York"]
+		}, {
+			"value": "MCI",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Kansas City", "Kansas City International Airport", "Missouri"]
+		}, {
+			"value": "MCO",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:37:24.462Z",
+			"metadata": null,
+			"synonyms": ["Florida", "Orlando", "Orlando International Airport"]
+		}, {
+			"value": "MDW",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Chicago", "Chicago Midway International Airport", "Illinois"]
+		}, {
+			"value": "MIA",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Florida", "Miami", "Miami International Airport"]
+		}, {
+			"value": "MSP",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Minneapolis–Saint Paul", "Minneapolis–Saint Paul International Airport", "Minnesota"]
+		}, {
+			"value": "MSY",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Louis Armstrong New Orleans International Airport", "Louisiana", "New Orleans"]
+		}, {
+			"value": "OAK",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["California", "Oakland", "Oakland International Airport"]
+		}, {
+			"value": "ORD",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:37:41.661Z",
+			"metadata": null,
+			"synonyms": ["Chicago", "Chicago O'Hare International Airport", "Illinois", "O'Hare"]
+		}, {
+			"value": "PDX",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Oregon", "Portland", "Portland International Airport"]
+		}, {
+			"value": "PHL",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:37:06.013Z",
+			"metadata": null,
+			"synonyms": ["Pennsylvania", "Philadelphia", "Philadelphia International Airport", "Philly"]
+		}, {
+			"value": "PHX",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Arizona", "Phoenix", "Phoenix Sky Harbor International Airport"]
+		}, {
+			"value": "PIT",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Pennsylvania", "Pittsburgh", "Pittsburgh International Airport"]
+		}, {
+			"value": "RDU",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["North Carolina", "Raleigh–Durham International Airport", "Wake County"]
+		}, {
+			"value": "RSW",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Florida", "Fort Myers", "Southwest Florida International Airport"]
+		}, {
+			"value": "SAN",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["California", "San Diego", "San Diego International Airport"]
+		}, {
+			"value": "SAT",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["San Antonio", "San Antonio International Airport", "Texas"]
+		}, {
+			"value": "SEA",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:38:07.437Z",
+			"metadata": null,
+			"synonyms": ["SeaTac", "Seattle", "Seattle–Tacoma International Airport", "Washington"]
+		}, {
+			"value": "SFO",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["California", "San Francisco", "San Francisco International Airport"]
+		}, {
+			"value": "SJC",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["California", "Norman Y. Mineta San José International Airport", "San Jose"]
+		}, {
+			"value": "SLC",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Salt Lake City", "Salt Lake City International Airport", "Utah"]
+		}, {
+			"value": "SMF",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["California", "Sacramento", "Sacramento International Airport"]
+		}, {
+			"value": "SNA",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["California", "John Wayne Airport", "Santa Ana"]
+		}, {
+			"value": "STL",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Lambert–St. Louis International Airport", "Missouri", "St. Louis"]
+		}, {
+			"value": "TPA",
+			"created": "2016-12-10T02:36:03.656Z",
+			"updated": "2016-12-10T02:36:03.656Z",
+			"metadata": null,
+			"synonyms": ["Florida", "Tampa", "Tampa International Airport"]
+		}],
+		"created": "2016-12-10T02:36:03.634Z",
+		"updated": "2016-12-10T02:36:03.634Z",
+		"open_list": null,
+		"description": null
+	}, {
+		"type": null,
+		"entity": "location",
+		"source": null,
+		"values": [{
+			"value": "departure",
+			"created": "2016-12-09T18:25:36.016Z",
+			"updated": "2016-12-09T18:25:36.016Z",
+			"metadata": null,
+			"synonyms": ["here"]
+		}, {
+			"value": "destination",
+			"created": "2016-12-09T18:25:36.016Z",
+			"updated": "2016-12-09T18:25:36.016Z",
+			"metadata": null,
+			"synonyms": ["arrival", "dest"]
+		}],
+		"created": "2016-12-09T18:25:36.016Z",
+		"updated": "2016-12-09T18:25:36.016Z",
+		"open_list": false,
+		"description": null
+	}, {
+		"type": null,
+		"entity": "sys-date",
+		"source": "system.entities",
+		"values": [],
+		"created": "2016-12-09T18:19:55.331Z",
+		"updated": "2016-12-09T18:19:55.331Z",
+		"open_list": false,
+		"description": null
+	}, {
+		"type": null,
+		"entity": "sys-number",
+		"source": "system.entities",
+		"values": [],
+		"created": "2016-12-12T20:48:53.063Z",
+		"updated": "2016-12-12T20:48:53.063Z",
+		"open_list": false,
+		"description": null
+	}, {
+		"type": null,
+		"entity": "sys-time",
+		"source": "system.entities",
+		"values": [],
+		"created": "2016-12-09T18:19:54.408Z",
+		"updated": "2016-12-09T18:19:54.408Z",
+		"open_list": false,
+		"description": null
+	}],
+	"language": "en",
+	"metadata": null,
+	"description": null,
+	"dialog_nodes": [{
+		"go_to": null,
+		"output": {
+			"text": "Cool, do you have any layovers?"
+		},
+		"parent": "node_4_1481308591294",
+		"context": {
+			"destination": "@cs-airport"
+		},
+		"created": "2016-12-09T18:36:46.313Z",
+		"updated": "2016-12-12T20:47:37.652Z",
+		"metadata": null,
+		"conditions": "@cs-airport",
+		"description": null,
+		"dialog_node": "node_5_1481308606114",
+		"previous_sibling": null
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "I got the weather at $destination for you!"
+		},
+		"parent": "node_1_1481319237014",
+		"context": {
+			"check_weather": "true"
+		},
+		"created": "2016-12-09T21:42:29.467Z",
+		"updated": "2016-12-14T01:59:51.813Z",
+		"metadata": null,
+		"conditions": "$destination",
+		"description": null,
+		"dialog_node": "node_2_1481319749243",
+		"previous_sibling": null
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "I got the weather at $destination for you!"
+		},
+		"parent": "node_1_1481319237014",
+		"context": {
+			"check_weather": "true"
+		},
+		"created": "2016-12-13T21:46:49.766Z",
+		"updated": "2016-12-14T02:00:12.526Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "node_1_1481665609442",
+		"previous_sibling": "node_3_1481337527168"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "I got the weather at $destination for you!"
+		},
+		"parent": "node_1_1481319237014",
+		"context": {
+			"destination": "@cs-airport",
+			"check_weather": "true"
+		},
+		"created": "2016-12-10T02:39:37.637Z",
+		"updated": "2016-12-14T02:00:01.053Z",
+		"metadata": null,
+		"conditions": "@cs-airport",
+		"description": null,
+		"dialog_node": "node_4_1481337577210",
+		"previous_sibling": "node_2_1481319749243"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Let me work my magic here....."
+		},
+		"parent": null,
+		"context": {
+			"predict_delay": "true"
+		},
+		"created": "2016-12-14T02:03:45.989Z",
+		"updated": "2016-12-14T05:06:23.499Z",
+		"metadata": null,
+		"conditions": "#predict",
+		"description": null,
+		"dialog_node": "node_2_1481681025861",
+		"previous_sibling": "node_9_1481340042527"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Lucky you! Which of the following flights gets you to $destination?"
+		},
+		"parent": "node_5_1481308606114",
+		"context": {
+			"layover": "-none-"
+		},
+		"created": "2016-12-12T20:48:16.396Z",
+		"updated": "2016-12-12T21:34:16.436Z",
+		"metadata": null,
+		"conditions": "#no",
+		"description": null,
+		"dialog_node": "node_5_1481575696004",
+		"previous_sibling": "node_4_1481575534217"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Ok, how many? Or where are your layovers?"
+		},
+		"parent": "node_5_1481308606114",
+		"context": null,
+		"created": "2016-12-12T20:45:34.465Z",
+		"updated": "2016-12-12T21:20:28.136Z",
+		"metadata": null,
+		"conditions": "#yes",
+		"description": null,
+		"dialog_node": "node_4_1481575534217",
+		"previous_sibling": null
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "OK, I see you are flying on $flight_number. What would you like to know about that flight?"
+		},
+		"parent": null,
+		"context": {
+			"flight_prompt": "true"
+		},
+		"created": "2016-12-13T03:20:07.066Z",
+		"updated": "2016-12-14T02:03:45.989Z",
+		"metadata": null,
+		"conditions": "$flight_number",
+		"description": null,
+		"dialog_node": "node_1_1481599206860",
+		"previous_sibling": "node_2_1481681025861"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "OK. Which of these flights are you taking to @cs-airport?"
+		},
+		"parent": "node_6_1481575715013",
+		"context": null,
+		"created": "2016-12-12T20:50:38.648Z",
+		"updated": "2016-12-12T20:52:34.964Z",
+		"metadata": null,
+		"conditions": "@cs-airport",
+		"description": null,
+		"dialog_node": "node_7_1481575838407",
+		"previous_sibling": null
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Please list the first layover"
+		},
+		"parent": "node_4_1481575534217",
+		"context": {
+			"num_layovers": "@sys-number"
+		},
+		"created": "2016-12-12T20:48:35.245Z",
+		"updated": "2016-12-12T21:17:38.108Z",
+		"metadata": null,
+		"conditions": "@sys-number",
+		"description": null,
+		"dialog_node": "node_6_1481575715013",
+		"previous_sibling": null
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Sure, I can tell you the following about your flight"
+		},
+		"parent": null,
+		"context": {
+			"flight_info": "true"
+		},
+		"created": "2016-12-10T03:20:42.814Z",
+		"updated": "2016-12-10T03:22:13.885Z",
+		"metadata": null,
+		"conditions": "#flight_info",
+		"description": null,
+		"dialog_node": "node_9_1481340042527",
+		"previous_sibling": "node_1_1481319237014"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Thanks! Where are you going to?"
+		},
+		"parent": "node_3_1481306901878",
+		"context": {
+			"departure_date": "@sys-date",
+			"departure_time": "@sys-time"
+		},
+		"created": "2016-12-09T20:43:29.207Z",
+		"updated": "2016-12-09T21:30:37.268Z",
+		"metadata": null,
+		"conditions": "@sys-date && @sys-time",
+		"description": null,
+		"dialog_node": "node_2_1481316208993",
+		"previous_sibling": "node_6_1481309147578"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Thanks. Where are you going to?"
+		},
+		"parent": "node_6_1481309147578",
+		"context": null,
+		"created": "2016-12-10T03:05:20.616Z",
+		"updated": "2016-12-12T20:45:11.698Z",
+		"metadata": null,
+		"conditions": "$departure_time && $departure_date",
+		"description": null,
+		"dialog_node": "node_5_1481339120326",
+		"previous_sibling": null
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Thanks. Which of these flights gets you to @cs-airport?"
+		},
+		"parent": "node_4_1481575534217",
+		"context": null,
+		"created": "2016-12-12T21:17:38.317Z",
+		"updated": "2016-12-12T21:18:31.114Z",
+		"metadata": null,
+		"conditions": "@cs-airport",
+		"description": null,
+		"dialog_node": "node_10_1481577457889",
+		"previous_sibling": "node_6_1481575715013"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Thanks, you are leaving from @cs-airport on @sys-date at @sys-time. Where are you flying to?"
+		},
+		"parent": "node_3_1481306901878",
+		"context": {
+			"departure": "@cs-airport",
+			"departure_date": "@sys-date",
+			"departure_time": "@sys-time"
+		},
+		"created": "2016-12-09T18:16:44.008Z",
+		"updated": "2016-12-09T20:58:21.141Z",
+		"metadata": null,
+		"conditions": "@cs-airport && @sys-date && @sys-time",
+		"description": null,
+		"dialog_node": "node_4_1481306921302",
+		"previous_sibling": null
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Thank you. You are traveling to $destination from $departure on $departure_date at $departure_time"
+		},
+		"parent": null,
+		"context": null,
+		"created": "2016-12-09T18:16:44.008Z",
+		"updated": "2016-12-13T03:37:36.599Z",
+		"metadata": null,
+		"conditions": "anything_else",
+		"description": null,
+		"dialog_node": "node_2_1481306611447",
+		"previous_sibling": "node_1_1481599206860"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Where are you flying from?"
+		},
+		"parent": "node_1_1481306374557",
+		"context": null,
+		"created": "2016-12-12T21:16:04.562Z",
+		"updated": "2016-12-12T21:16:10.511Z",
+		"metadata": null,
+		"conditions": null,
+		"description": null,
+		"dialog_node": "node_9_1481577364304",
+		"previous_sibling": null
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "Where is your next layover?"
+		},
+		"parent": "node_6_1481575715013",
+		"context": {
+			"num_layovers": "<?num_layovers - 1?>"
+		},
+		"created": "2016-12-12T20:52:35.077Z",
+		"updated": "2016-12-12T20:53:57.758Z",
+		"metadata": null,
+		"conditions": "$num_layovers > 1",
+		"description": null,
+		"dialog_node": "node_8_1481575954728",
+		"previous_sibling": "node_7_1481575838407"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "You are leaving from @cs-airport at @sys-date."
+		},
+		"parent": "node_3_1481306901878",
+		"context": {
+			"departure": "@cs-airport",
+			"departure_time": "@sys-time"
+		},
+		"created": "2016-12-10T03:14:43.005Z",
+		"updated": "2016-12-10T03:15:25.724Z",
+		"metadata": null,
+		"conditions": "@cs-airport && @sys-date",
+		"description": null,
+		"dialog_node": "node_8_1481339682709",
+		"previous_sibling": "node_3_1481308363309"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "You are leaving from @cs-airport on @sys-date"
+		},
+		"parent": "node_3_1481306901878",
+		"context": {
+			"departure": "@cs-airport",
+			"departure_date": "@sys-date"
+		},
+		"created": "2016-12-09T18:27:55.152Z",
+		"updated": "2016-12-09T18:44:31.536Z",
+		"metadata": null,
+		"conditions": "@cs-airport && @sys-date",
+		"description": null,
+		"dialog_node": "node_1_1481308074959",
+		"previous_sibling": "node_4_1481306921302"
+	}, {
+		"go_to": null,
+		"output": {
+			"text": "You are leaving @sys-date at @sys-time. Can you please supply where you are leaving from?"
+		},
+		"parent": "node_3_1481306901878",
+		"context": {
+			"departure_date": "@sys-date",
+			"departure_time": "@sys-time"
+		},
+		"created": "2016-12-09T18:29:32.900Z",
+		"updated": "2016-12-10T03:00:45.414Z",
+		"metadata": null,
+		"conditions": "@sys-date && @sys-time && !$departure",
+		"description": null,
+		"dialog_node": "node_2_1481308172522",
+		"previous_sibling": "node_1_1481308074959"
+	}, {
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "node_9_1481577364304"
+		},
+		"output": {
+			"text": "Hello! Welcome to the Cognitive Flight Predictor App."
+		},
+		"parent": null,
+		"context": null,
+		"created": "2016-12-09T18:16:44.008Z",
+		"updated": "2016-12-12T21:16:14.728Z",
+		"metadata": null,
+		"conditions": "conversation_start",
+		"description": null,
+		"dialog_node": "node_1_1481306374557",
+		"previous_sibling": null
+	}, {
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "node_2_1481319749243"
+		},
+		"output": {},
+		"parent": null,
+		"context": null,
+		"created": "2016-12-09T21:33:57.399Z",
+		"updated": "2016-12-09T21:46:08.646Z",
+		"metadata": null,
+		"conditions": "#weather",
+		"description": null,
+		"dialog_node": "node_1_1481319237014",
+		"previous_sibling": "node_4_1481308591294"
+	}, {
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "node_4_1481306921302"
+		},
+		"output": {},
+		"parent": null,
+		"context": null,
+		"created": "2016-12-09T18:16:44.008Z",
+		"updated": "2016-12-12T21:15:44.975Z",
+		"metadata": null,
+		"conditions": "!$departure || #departing",
+		"description": null,
+		"dialog_node": "node_3_1481306901878",
+		"previous_sibling": "node_1_1481306374557"
+	}, {
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "node_5_1481308606114"
+		},
+		"output": {},
+		"parent": null,
+		"context": null,
+		"created": "2016-12-09T18:36:31.636Z",
+		"updated": "2016-12-09T21:16:34.923Z",
+		"metadata": null,
+		"conditions": "#destination || @cs-airport",
+		"description": null,
+		"dialog_node": "node_4_1481308591294",
+		"previous_sibling": "node_3_1481306901878"
+	}, {
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "node_5_1481339120326"
+		},
+		"output": {},
+		"parent": "node_3_1481306901878",
+		"context": {
+			"departure": "@cs-airport"
+		},
+		"created": "2016-12-09T18:45:47.826Z",
+		"updated": "2016-12-10T03:14:43.005Z",
+		"metadata": null,
+		"conditions": "@cs-airport",
+		"description": null,
+		"dialog_node": "node_6_1481309147578",
+		"previous_sibling": "node_8_1481339682709"
+	}, {
+		"go_to": {
+			"return": null,
+			"selector": "user_input",
+			"dialog_node": "node_2_1481319749243"
+		},
+		"output": {
+			"text": "Where are you going to?"
+		},
+		"parent": "node_1_1481319237014",
+		"context": null,
+		"created": "2016-12-10T02:38:47.454Z",
+		"updated": "2016-12-10T02:42:34.188Z",
+		"metadata": null,
+		"conditions": "!$destination",
+		"description": null,
+		"dialog_node": "node_3_1481337527168",
+		"previous_sibling": "node_4_1481337577210"
+	}, {
+		"go_to": {
+			"return": null,
+			"selector": "user_input",
+			"dialog_node": "node_4_1481306921302"
+		},
+		"output": {
+			"text": "You are leaving from @cs-airport. Could you tell me when you are leaving?"
+		},
+		"parent": "node_6_1481309147578",
+		"context": null,
+		"created": "2016-12-10T03:12:38.121Z",
+		"updated": "2016-12-10T03:19:10.730Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "node_7_1481339557596",
+		"previous_sibling": "node_5_1481339120326"
+	}, {
+		"go_to": {
+			"return": null,
+			"selector": "user_input",
+			"dialog_node": "node_4_1481306921302"
+		},
+		"output": {
+			"text": ["You are leaving from @cs-airport at @sys-time. ", "Where are you going to?"]
+		},
+		"parent": "node_3_1481306901878",
+		"context": {
+			"departure": "@cs-airport",
+			"departure_time": "@sys-time"
+		},
+		"created": "2016-12-09T18:32:43.594Z",
+		"updated": "2016-12-10T03:17:24.007Z",
+		"metadata": null,
+		"conditions": "@cs-airport && @sys-time",
+		"description": null,
+		"dialog_node": "node_3_1481308363309",
+		"previous_sibling": "node_2_1481308172522"
+	}],
+	"workspace_id": "b46837f1-31bd-4e37-9551-104c44b7e46c",
+	"counterexamples": []
+}
