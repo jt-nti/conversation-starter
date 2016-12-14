@@ -1,0 +1,2245 @@
+{
+	"name": "The Darkest Dungeon",
+	"created": "2016-12-09T17:36:49.330Z",
+	"intents": [],
+	"updated": "2016-12-09T18:53:11.401Z",
+	"entities": [],
+	"language": "en",
+	"metadata": null,
+	"description": "Evil lurks inside.",
+	"dialog_nodes": [{
+		"go_to": null,
+		"output": {
+			"text": "Apart from a big wardrobe standing at the wall, this room is completely empty. The only way out of the room seems to be the one you used to get here. <?!context.has('openned_wardrobe') ? 'Judging from the handle on the wardrobe door, this wardrobe seems to opened a lot.' : ''?> You can do... <?!context.has('openned_wardrobe') ? 'OpenWardrobe' : ''?>,  You can move... goright, "
+		},
+		"parent": "wardrobe_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('openned_wardrobe')",
+		"description": null,
+		"dialog_node": "wardrobe_room0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "Now you are at a dragon tail. There doesn't seem to be a lot in the room, well except the giant treasure the dragon is lying on. Not sure if it is a good idea to steal something.  <?!context.has('sword') ? 'There is a sword quite far away from the dragon, you might be able to take it. ' : ''?><?!context.has('woken_dragon') ? '' : ''?> You can do... <?!context.has('sword') ? 'TakeSword' : ''?>, <?!context.has('woken_dragon') ? 'TakeTreasure' : ''?>,  You can move... goback, "
+		},
+		"parent": "dragon_second_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('woken_dragon')",
+		"description": null,
+		"dialog_node": "dragon_second_room1",
+		"previous_sibling": "dragon_second_room0"
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "The dragon is awake! He looks at you angrily and slowly inhales air to his nostrils. Quickly, what will you do?<?true ? '' : ''?><?true ? '' : ''?><?true ? '' : ''?> You can do... <?true ? 'RunAway' : ''?>, <?true ? 'Fight' : ''?>, <?true ? 'BegForMercy' : ''?>, "
+		},
+		"parent": "dragon_first_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('woken_dragon')",
+		"description": null,
+		"dialog_node": "dragon_first_room2",
+		"previous_sibling": "dragon_first_room1"
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "The dragon looks at you angrily and slowly inhales air to his nostrils. Quickly, what will you do?<?true ? '' : ''?><?true ? '' : ''?><?true ? '' : ''?> You can do... <?true ? 'RunAway' : ''?>, <?true ? 'Fight' : ''?>, <?true ? 'BegForMercy' : ''?>, "
+		},
+		"parent": "dragon_second_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('woken_dragon')",
+		"description": null,
+		"dialog_node": "dragon_second_room2",
+		"previous_sibling": "dragon_second_room1"
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "The rabble in the room is now cleared. You can continue left. You can move... goright, goleft, "
+		},
+		"parent": "rabble_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('rabble_cleared')",
+		"description": null,
+		"dialog_node": "rabble_room0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "The room behind the wardrobe has nothing special in it. There is a steep tunnel leading down. It smells. <?!context.has('broken_pot') ? 'There is a pot inside the room. ' : 'You see the remains of broken pot on the floor.'?> You can do... <?!context.has('broken_pot') ? 'BreakPot' : ''?>,  You can move... goback, godown, "
+		},
+		"parent": "behind_wardrobe_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "behind_wardrobe_room0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "The things are getting more interesting. The tunnel extends into the big cave...with big green sleeping dragon. You find yourself right in front of his big head. <?!context.has('woken_dragon') ? 'There is a pot inside the room. ' : 'You see the remains of broken pot on the floor.'?> You can do... <?!context.has('woken_dragon') ? 'WakeUpTheDragon' : ''?>,  You can move... goback, GoAroundDragon, "
+		},
+		"parent": "dragon_first_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('woken_dragon')",
+		"description": null,
+		"dialog_node": "dragon_first_room1",
+		"previous_sibling": "dragon_first_room0"
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "The troll is playing with the gold. Now seems to be a good time to run.<?true ? '' : ''?> You can do... <?true ? 'FightTroll' : ''?>,  You can move... GoAroundTheTroll, run, "
+		},
+		"parent": "troll_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('happy_troll')",
+		"description": null,
+		"dialog_node": "troll_room1",
+		"previous_sibling": "troll_room0"
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "This room contains...big...smelly troll! He looks at you and says 'Give me all the gold you have and I will let you live!'<?context.has('gold') ? 'There is a pot inside the room. ' : 'You see the remains of broken pot on the floor.'?><?true ? '' : ''?> You can do... <?context.has('gold') ? 'GiveGold' : ''?>, <?true ? 'FightTroll' : ''?>, "
+		},
+		"parent": "troll_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('dead_troll')",
+		"description": null,
+		"dialog_node": "troll_room2",
+		"previous_sibling": "troll_room1"
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "This rooms contains a big opened wardrobe. There is plenty of clothes inside...and maybe something else... You can move... goright, gointowardrobe, "
+		},
+		"parent": "wardrobe_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('openned_wardrobe')",
+		"description": null,
+		"dialog_node": "wardrobe_room1",
+		"previous_sibling": "wardrobe_room0"
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "You are dead."
+		},
+		"parent": "dragon_first_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('dead')",
+		"description": null,
+		"dialog_node": "dragon_first_room0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "You are dead."
+		},
+		"parent": "dragon_second_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('dead')",
+		"description": null,
+		"dialog_node": "dragon_second_room0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "You are dead."
+		},
+		"parent": "trap_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('dead')",
+		"description": null,
+		"dialog_node": "trap_room0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "You are dead."
+		},
+		"parent": "troll_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('dead')",
+		"description": null,
+		"dialog_node": "troll_room0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "You are in a medium sized room. There is a table in the middle of the room, otherwise the room is empty. There are stairs descending deeper into the dungeon.<?!context.has('key') ? 'You see there is an old key lying on the table. ' : 'You can see the key shape on the place where the key was lying on the table.'?> You can do... <?!context.has('key') ? 'PickKey' : ''?>,  You can move... goleft, godeeper, "
+		},
+		"parent": "key_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "key_room0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "You are in the dungeon entrance room, there is plenty of dust. You feel a light breeze coming from the dungeon entrance. You can move... goleft, goright, "
+		},
+		"parent": "entrance",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "entrance0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "You find your self in another room. The way further is blocked by rabble. You could turn back or you could try to clear the rabble.<?!context.has('rabble_cleared') ? '' : ''?> You can do... <?!context.has('rabble_cleared') ? 'ClearRabble' : ''?>,  You can move... goright, "
+		},
+		"parent": "rabble_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "rabble_room1",
+		"previous_sibling": "rabble_room0"
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "You find your self in a small room. You see not very well hidden trap door in the middle of the room. You should be careful.<?true ? '' : ''?> You can do... <?true ? 'StepOnTrapDoor' : ''?>,  You can move... goright, goleft, "
+		},
+		"parent": "trap_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "trap_room1",
+		"previous_sibling": "trap_room0"
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "You find yourself into a kind of cellar. There is big rusty chest near the wall. It appears closed.<?!context.has('gold') ? '' : ''?> You can do... <?!context.has('gold') ? 'OpenChest' : ''?>,  You can move... ascend, "
+		},
+		"parent": "treasure_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('gold')",
+		"description": null,
+		"dialog_node": "treasure_room0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "You find yourself into a kind of cellar. There is opened empty rusty chest near the wall. Plenty of gold there was as you remember. You can move... ascend, "
+		},
+		"parent": "treasure_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('gold')",
+		"description": null,
+		"dialog_node": "treasure_room1",
+		"previous_sibling": "treasure_room0"
+	},
+	{
+		"go_to": null,
+		"output": {
+			"text": "You see the dead troll lying on the ground. The proof of your dungeon mastery right in front of your eyes... It smells. <?true ? '' : ''?> You can do... <?true ? 'KickTroll' : ''?>,  You can move... goup, "
+		},
+		"parent": "troll_room",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('dead_troll')",
+		"description": null,
+		"dialog_node": "troll_room3",
+		"previous_sibling": "troll_room2"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "behind_wardrobe_room"
+		},
+		"output": {
+			"text": "You go back up the tunnel."
+		},
+		"parent": "troll_room3",
+		"context": {
+			"_eval": "context.has('behind_wardrobe_room_entered') ? context.addProperty('behind_wardrobe_room_entered', (context.behind_wardrobe_room_entered + 1)) : context.addProperty('behind_wardrobe_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goup')",
+		"description": null,
+		"dialog_node": "troll_room3goup",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "behind_wardrobe_room"
+		},
+		"output": {
+			"text": "You have trashed the pot into shreds."
+		},
+		"parent": "behind_wardrobe_room0BreakPot",
+		"context": {
+			"_eval": ["context.addProperty('broken_pot', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('broken_pot')",
+		"description": null,
+		"dialog_node": "behind_wardrobe_room0BreakPoteffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "behind_wardrobe_room"
+		},
+		"output": {
+			"text": "You push away the clothes and go to the secret doors inside the wardrobe"
+		},
+		"parent": "wardrobe_room1",
+		"context": {
+			"_eval": "context.has('behind_wardrobe_room_entered') ? context.addProperty('behind_wardrobe_room_entered', (context.behind_wardrobe_room_entered + 1)) : context.addProperty('behind_wardrobe_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('gointowardrobe')",
+		"description": null,
+		"dialog_node": "wardrobe_room1gointowardrobe",
+		"previous_sibling": "wardrobe_room1goright"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "behind_wardrobe_room"
+		},
+		"output": {
+			"text": "You run away as fast as you can back up the tunnel."
+		},
+		"parent": "troll_room1",
+		"context": {
+			"_eval": "context.has('behind_wardrobe_room_entered') ? context.addProperty('behind_wardrobe_room_entered', (context.behind_wardrobe_room_entered + 1)) : context.addProperty('behind_wardrobe_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('run')",
+		"description": null,
+		"dialog_node": "troll_room1run",
+		"previous_sibling": "troll_room1GoAroundTheTroll"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "behind_wardrobe_room0"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "behind_wardrobe_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "behind_wardrobe_room0default",
+		"previous_sibling": "behind_wardrobe_room0BreakPot"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_first_room"
+		},
+		"output": {
+			"text": "You beg for mercy. 'Oh great dragon, please let me - a pitiful human to live'. The dragon response is clear - he stomped you with his big clawed feet."
+		},
+		"parent": "dragon_first_room2BegForMercy",
+		"context": {
+			"_eval": ["context.addProperty('dead', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_first_room2BegForMercyeffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_first_room"
+		},
+		"output": {
+			"text": "You return back to the dragon head."
+		},
+		"parent": "dragon_second_room1",
+		"context": {
+			"_eval": "context.has('dragon_first_room_entered') ? context.addProperty('dragon_first_room_entered', (context.dragon_first_room_entered + 1)) : context.addProperty('dragon_first_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goback')",
+		"description": null,
+		"dialog_node": "dragon_second_room1goback",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_first_room"
+		},
+		"output": {
+			"text": "You shout like hell and you have woken up the dragon. Seriously..do you think this was a good idea?"
+		},
+		"parent": "dragon_first_room1WakeUpTheDragon",
+		"context": {
+			"_eval": ["context.addProperty('woken_dragon', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_first_room1WakeUpTheDragoneffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_first_room"
+		},
+		"output": {
+			"text": "You try to go around the troll and descend deeper into the dungeon. Are you insine? By some miracle the troll kept playing with the gold and haven't noticed you."
+		},
+		"parent": "troll_room1",
+		"context": {
+			"_eval": "context.has('dragon_first_room_entered') ? context.addProperty('dragon_first_room_entered', (context.dragon_first_room_entered + 1)) : context.addProperty('dragon_first_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('GoAroundTheTroll')",
+		"description": null,
+		"dialog_node": "troll_room1GoAroundTheTroll",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_first_room"
+		},
+		"output": {
+			"text": "You turn around and run like hell. Unfortunately the dragon fire was faster than your legs. You are burned to the crisp."
+		},
+		"parent": "dragon_first_room2RunAway",
+		"context": {
+			"_eval": ["context.addProperty('dead', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_first_room2RunAwayeffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_first_room"
+		},
+		"output": {
+			"text": "You want to fight this giant dragon? The fight last exactly the time the dragon needed to inhale all the air to burn you down to a crisp with his fire."
+		},
+		"parent": "dragon_first_room2Fight",
+		"context": {
+			"_eval": ["context.addProperty('dead', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_first_room2Fighteffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_first_room0"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "dragon_first_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_first_room0default",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_first_room1"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "dragon_first_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_first_room1default",
+		"previous_sibling": "dragon_first_room1WakeUpTheDragon"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_first_room2"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "dragon_first_room2",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_first_room2default",
+		"previous_sibling": "dragon_first_room2BegForMercy"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_second_room"
+		},
+		"output": {
+			"text": "You beg for mercy. 'Oh great dragon, please let me - a pitiful human to live'. The dragon response is clear - he stomped you with his big clawed feet."
+		},
+		"parent": "dragon_second_room2BegForMercy",
+		"context": {
+			"_eval": ["context.addProperty('dead', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_second_room2BegForMercyeffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_second_room"
+		},
+		"output": {
+			"text": "You carefull went and picked up the sword. The dragon is still sleeping."
+		},
+		"parent": "dragon_second_room1TakeSword",
+		"context": {
+			"_eval": ["context.addProperty('sword', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_second_room1TakeSwordeffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_second_room"
+		},
+		"output": {
+			"text": "You slowly and quietly go around the big dragon to second part of the room."
+		},
+		"parent": "dragon_first_room1",
+		"context": {
+			"_eval": "context.has('dragon_second_room_entered') ? context.addProperty('dragon_second_room_entered', (context.dragon_second_room_entered + 1)) : context.addProperty('dragon_second_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('GoAroundDragon')",
+		"description": null,
+		"dialog_node": "dragon_first_room1GoAroundDragon",
+		"previous_sibling": "dragon_first_room1goback"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_second_room"
+		},
+		"output": {
+			"text": "You tried to steal some treasure from the dragon. Dragons seem to have a sixth sense concerning the gold. He has woken up immediatelly."
+		},
+		"parent": "dragon_second_room1TakeTreasure",
+		"context": {
+			"_eval": ["context.addProperty('woken_dragon', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_second_room1TakeTreasureeffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_second_room"
+		},
+		"output": {
+			"text": "You turn around and run like hell. Unfortunately the dragon fire was faster than your legs. You are burned to the crisp."
+		},
+		"parent": "dragon_second_room2RunAway",
+		"context": {
+			"_eval": ["context.addProperty('dead', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_second_room2RunAwayeffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_second_room"
+		},
+		"output": {
+			"text": "You want to fight this giant dragon? The fight last exactly the time the dragon needed to inhale all the air to burn you down to a crisp with his fire."
+		},
+		"parent": "dragon_second_room2Fight",
+		"context": {
+			"_eval": ["context.addProperty('dead', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_second_room2Fighteffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_second_room0"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "dragon_second_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_second_room0default",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_second_room1"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "dragon_second_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_second_room1default",
+		"previous_sibling": "dragon_second_room1TakeTreasure"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "dragon_second_room2"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "dragon_second_room2",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "dragon_second_room2default",
+		"previous_sibling": "dragon_second_room2BegForMercy"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "entrance"
+		},
+		"output": {
+			"text": "Welcome to the Darkest Dungeon. Only the wisest will survive."
+		},
+		"parent": null,
+		"context": {
+			"name": "Knight",
+			"_eval": "context.has('entrance_entered') ? context.addProperty('entrance_entered', (context.entrance_entered + 1)) : context.addProperty('entrance_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "conversation_start",
+		"description": null,
+		"dialog_node": "introduction",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "entrance"
+		},
+		"output": {
+			"text": "You go back to the entrance."
+		},
+		"parent": "key_room0",
+		"context": {
+			"_eval": "context.has('entrance_entered') ? context.addProperty('entrance_entered', (context.entrance_entered + 1)) : context.addProperty('entrance_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goleft')",
+		"description": null,
+		"dialog_node": "key_room0goleft",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "entrance"
+		},
+		"output": {
+			"text": "You go right"
+		},
+		"parent": "trap_room1",
+		"context": {
+			"_eval": "context.has('entrance_entered') ? context.addProperty('entrance_entered', (context.entrance_entered + 1)) : context.addProperty('entrance_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goright')",
+		"description": null,
+		"dialog_node": "trap_room1goright",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "entrance0"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "entrance0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "entrance0default",
+		"previous_sibling": "entrance0goright"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "key_room"
+		},
+		"output": {
+			"text": "You ascend the stairs."
+		},
+		"parent": "treasure_room0",
+		"context": {
+			"_eval": "context.has('key_room_entered') ? context.addProperty('key_room_entered', (context.key_room_entered + 1)) : context.addProperty('key_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('ascend')",
+		"description": null,
+		"dialog_node": "treasure_room0ascend",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "key_room"
+		},
+		"output": {
+			"text": "You ascend the stairs."
+		},
+		"parent": "treasure_room1",
+		"context": {
+			"_eval": "context.has('key_room_entered') ? context.addProperty('key_room_entered', (context.key_room_entered + 1)) : context.addProperty('key_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('ascend')",
+		"description": null,
+		"dialog_node": "treasure_room1ascend",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "key_room"
+		},
+		"output": {
+			"text": "You go right"
+		},
+		"parent": "entrance0",
+		"context": {
+			"_eval": "context.has('key_room_entered') ? context.addProperty('key_room_entered', (context.key_room_entered + 1)) : context.addProperty('key_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goright')",
+		"description": null,
+		"dialog_node": "entrance0goright",
+		"previous_sibling": "entrance0goleft"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "key_room"
+		},
+		"output": {
+			"text": "You have picked up the key."
+		},
+		"parent": "key_room0PickKey",
+		"context": {
+			"_eval": ["context.addProperty('key', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('key')",
+		"description": null,
+		"dialog_node": "key_room0PickKeyeffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "key_room0"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "key_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "key_room0default",
+		"previous_sibling": "key_room0PickKey"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "rabble_room"
+		},
+		"output": {
+			"text": "You continue left."
+		},
+		"parent": "trap_room1",
+		"context": {
+			"_eval": "context.has('rabble_room_entered') ? context.addProperty('rabble_room_entered', (context.rabble_room_entered + 1)) : context.addProperty('rabble_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goleft')",
+		"description": null,
+		"dialog_node": "trap_room1goleft",
+		"previous_sibling": "trap_room1goright"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "rabble_room"
+		},
+		"output": {
+			"text": "You go right"
+		},
+		"parent": "wardrobe_room0",
+		"context": {
+			"_eval": "context.has('rabble_room_entered') ? context.addProperty('rabble_room_entered', (context.rabble_room_entered + 1)) : context.addProperty('rabble_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goright')",
+		"description": null,
+		"dialog_node": "wardrobe_room0goright",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "rabble_room"
+		},
+		"output": {
+			"text": "You go right"
+		},
+		"parent": "wardrobe_room1",
+		"context": {
+			"_eval": "context.has('rabble_room_entered') ? context.addProperty('rabble_room_entered', (context.rabble_room_entered + 1)) : context.addProperty('rabble_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goright')",
+		"description": null,
+		"dialog_node": "wardrobe_room1goright",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "rabble_room"
+		},
+		"output": {
+			"text": "You spend a good hour clearing the rabble, but now you are finished and the way is clear."
+		},
+		"parent": "rabble_room1ClearRabble",
+		"context": {
+			"_eval": ["context.addProperty('rabble_cleared', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "rabble_room1ClearRabbleeffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "rabble_room0"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "rabble_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "rabble_room0default",
+		"previous_sibling": "rabble_room0goleft"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "rabble_room1"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "rabble_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "rabble_room1default",
+		"previous_sibling": "rabble_room1ClearRabble"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "trap_room"
+		},
+		"output": {
+			"text": "You go left"
+		},
+		"parent": "entrance0",
+		"context": {
+			"_eval": "context.has('trap_room_entered') ? context.addProperty('trap_room_entered', (context.trap_room_entered + 1)) : context.addProperty('trap_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goleft')",
+		"description": null,
+		"dialog_node": "entrance0goleft",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "trap_room"
+		},
+		"output": {
+			"text": "You go right"
+		},
+		"parent": "rabble_room0",
+		"context": {
+			"_eval": "context.has('trap_room_entered') ? context.addProperty('trap_room_entered', (context.trap_room_entered + 1)) : context.addProperty('trap_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goright')",
+		"description": null,
+		"dialog_node": "rabble_room0goright",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "trap_room"
+		},
+		"output": {
+			"text": "You go right"
+		},
+		"parent": "rabble_room1",
+		"context": {
+			"_eval": "context.has('trap_room_entered') ? context.addProperty('trap_room_entered', (context.trap_room_entered + 1)) : context.addProperty('trap_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goright')",
+		"description": null,
+		"dialog_node": "rabble_room1goright",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "trap_room"
+		},
+		"output": {
+			"text": "You stepped on the trap door and immediately you find yourself falling down in a narrow shaft. Why did you do that?"
+		},
+		"parent": "trap_room1StepOnTrapDoor",
+		"context": {
+			"_eval": ["context.addProperty('dead', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "trap_room1StepOnTrapDooreffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "trap_room0"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "trap_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "trap_room0default",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "trap_room1"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "trap_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "trap_room1default",
+		"previous_sibling": "trap_room1StepOnTrapDoor"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "treasure_room"
+		},
+		"output": {
+			"text": "You descend deeper into the dungeon."
+		},
+		"parent": "key_room0",
+		"context": {
+			"_eval": "context.has('treasure_room_entered') ? context.addProperty('treasure_room_entered', (context.treasure_room_entered + 1)) : context.addProperty('treasure_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('godeeper')",
+		"description": null,
+		"dialog_node": "key_room0godeeper",
+		"previous_sibling": "key_room0goleft"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "treasure_room"
+		},
+		"output": {
+			"text": "You have opened the chest. There is plenty of gold. You put it into your pockets. You are rich!"
+		},
+		"parent": "treasure_room0OpenChest",
+		"context": {
+			"_eval": ["context.addProperty('gold', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('key')",
+		"description": null,
+		"dialog_node": "treasure_room0OpenChesteffect1",
+		"previous_sibling": "treasure_room0OpenChesteffect0"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "treasure_room"
+		},
+		"output": {
+			"text": "You tried to open the chest, but you failed. You need a key."
+		},
+		"parent": "treasure_room0OpenChest",
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('key')",
+		"description": null,
+		"dialog_node": "treasure_room0OpenChesteffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "treasure_room0"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "treasure_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "treasure_room0default",
+		"previous_sibling": "treasure_room0OpenChest"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "treasure_room1"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "treasure_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "treasure_room1default",
+		"previous_sibling": "treasure_room1ascend"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room"
+		},
+		"output": {
+			"text": "Fighting the troll unarmened turned out not to be the wisest decision. The troll is too big and powerfull. It defeated you and now he feasts upon your body."
+		},
+		"parent": "troll_room1FightTroll",
+		"context": {
+			"_eval": ["context.addProperty('dead', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('sword')",
+		"description": null,
+		"dialog_node": "troll_room1FightTrolleffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room"
+		},
+		"output": {
+			"text": "Fighting the troll unarmened turned out not to be the wisest decision. The troll is too big and powerfull. It defeated you and now he feasts upon your body."
+		},
+		"parent": "troll_room2FightTroll",
+		"context": {
+			"_eval": ["context.addProperty('dead', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('sword')",
+		"description": null,
+		"dialog_node": "troll_room2FightTrolleffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room"
+		},
+		"output": {
+			"text": "You go back to the room with the troll."
+		},
+		"parent": "dragon_first_room1",
+		"context": {
+			"_eval": "context.has('troll_room_entered') ? context.addProperty('troll_room_entered', (context.troll_room_entered + 1)) : context.addProperty('troll_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goback')",
+		"description": null,
+		"dialog_node": "dragon_first_room1goback",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room"
+		},
+		"output": {
+			"text": "You go down to the smelly tunnel."
+		},
+		"parent": "behind_wardrobe_room0",
+		"context": {
+			"_eval": "context.has('troll_room_entered') ? context.addProperty('troll_room_entered', (context.troll_room_entered + 1)) : context.addProperty('troll_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('godown')",
+		"description": null,
+		"dialog_node": "behind_wardrobe_room0godown",
+		"previous_sibling": "behind_wardrobe_room0goback"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room"
+		},
+		"output": {
+			"text": "You have given the troll all your gold."
+		},
+		"parent": "troll_room2GiveGold",
+		"context": {
+			"_eval": ["context.remove('gold')",
+			" context.addProperty('happy_troll',true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('gold')",
+		"description": null,
+		"dialog_node": "troll_room2GiveGoldeffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room"
+		},
+		"output": {
+			"text": "You have hacked and slashed the troll with the sword, it was hard fight, but you managed to kill him. Congratulations you are a troll slayer and the darkest dungeon master!"
+		},
+		"parent": "troll_room1FightTroll",
+		"context": {
+			"_eval": ["context.addProperty('dead_troll', true)",
+			" context.remove('happy_troll')"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('sword')",
+		"description": null,
+		"dialog_node": "troll_room1FightTrolleffect1",
+		"previous_sibling": "troll_room1FightTrolleffect0"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room"
+		},
+		"output": {
+			"text": "You have hacked and slashed the troll with the sword, it was hard fight, but you managed to kill him. Congratulations you are a troll slayer and the darkest dungeon master!"
+		},
+		"parent": "troll_room2FightTroll",
+		"context": {
+			"_eval": ["context.addProperty('dead_troll', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('sword')",
+		"description": null,
+		"dialog_node": "troll_room2FightTrolleffect1",
+		"previous_sibling": "troll_room2FightTrolleffect0"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room"
+		},
+		"output": {
+			"text": "You kicked the troll corpse. You feel a little bit better."
+		},
+		"parent": "troll_room3KickTroll",
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "troll_room3KickTrolleffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room0"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "troll_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "troll_room0default",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room1"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "troll_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "troll_room1default",
+		"previous_sibling": "troll_room1FightTroll"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room2"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "troll_room2",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "troll_room2default",
+		"previous_sibling": "troll_room2FightTroll"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "troll_room3"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "troll_room3",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "troll_room3default",
+		"previous_sibling": "troll_room3KickTroll"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "wardrobe_room"
+		},
+		"output": {
+			"text": "You come to the wardrobe and open it."
+		},
+		"parent": "wardrobe_room0OpenWardrobe",
+		"context": {
+			"_eval": ["context.addProperty('openned_wardrobe', true)"]
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "wardrobe_room0OpenWardrobeeffect0",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "wardrobe_room"
+		},
+		"output": {
+			"text": "You continue left."
+		},
+		"parent": "rabble_room0",
+		"context": {
+			"_eval": "context.has('wardrobe_room_entered') ? context.addProperty('wardrobe_room_entered', (context.wardrobe_room_entered + 1)) : context.addProperty('wardrobe_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goleft')",
+		"description": null,
+		"dialog_node": "rabble_room0goleft",
+		"previous_sibling": "rabble_room0goright"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "wardrobe_room"
+		},
+		"output": {
+			"text": "You go back to wardrobe room."
+		},
+		"parent": "behind_wardrobe_room0",
+		"context": {
+			"_eval": "context.has('wardrobe_room_entered') ? context.addProperty('wardrobe_room_entered', (context.wardrobe_room_entered + 1)) : context.addProperty('wardrobe_room_entered',1) "
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "input.text.contains('goback')",
+		"description": null,
+		"dialog_node": "behind_wardrobe_room0goback",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "wardrobe_room0"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "wardrobe_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "wardrobe_room0default",
+		"previous_sibling": "wardrobe_room0OpenWardrobe"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "body",
+			"dialog_node": "wardrobe_room1"
+		},
+		"output": {
+			"text": "You can do only things specified in the room."
+		},
+		"parent": "wardrobe_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true",
+		"description": null,
+		"dialog_node": "wardrobe_room1default",
+		"previous_sibling": "wardrobe_room1gointowardrobe"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "behind_wardrobe_room0"
+		},
+		"output": {
+			
+		},
+		"parent": null,
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "false",
+		"description": null,
+		"dialog_node": "behind_wardrobe_room",
+		"previous_sibling": "wardrobe_room"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "behind_wardrobe_room0BreakPoteffect0"
+		},
+		"output": {
+			"text": "You did BreakPot"
+		},
+		"parent": "behind_wardrobe_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('broken_pot') && input.text.contains('BreakPot')",
+		"description": null,
+		"dialog_node": "behind_wardrobe_room0BreakPot",
+		"previous_sibling": "behind_wardrobe_room0godown"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "dragon_first_room0"
+		},
+		"output": {
+			
+		},
+		"parent": null,
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "false",
+		"description": null,
+		"dialog_node": "dragon_first_room",
+		"previous_sibling": "troll_room"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "dragon_first_room1WakeUpTheDragoneffect0"
+		},
+		"output": {
+			"text": "You did WakeUpTheDragon"
+		},
+		"parent": "dragon_first_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('woken_dragon') && input.text.contains('WakeUpTheDragon')",
+		"description": null,
+		"dialog_node": "dragon_first_room1WakeUpTheDragon",
+		"previous_sibling": "dragon_first_room1GoAroundDragon"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "dragon_first_room2BegForMercyeffect0"
+		},
+		"output": {
+			"text": "You did BegForMercy"
+		},
+		"parent": "dragon_first_room2",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true && input.text.contains('BegForMercy')",
+		"description": null,
+		"dialog_node": "dragon_first_room2BegForMercy",
+		"previous_sibling": "dragon_first_room2Fight"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "dragon_first_room2Fighteffect0"
+		},
+		"output": {
+			"text": "You did Fight"
+		},
+		"parent": "dragon_first_room2",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true && input.text.contains('Fight')",
+		"description": null,
+		"dialog_node": "dragon_first_room2Fight",
+		"previous_sibling": "dragon_first_room2RunAway"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "dragon_first_room2RunAwayeffect0"
+		},
+		"output": {
+			"text": "You did RunAway"
+		},
+		"parent": "dragon_first_room2",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true && input.text.contains('RunAway')",
+		"description": null,
+		"dialog_node": "dragon_first_room2RunAway",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "dragon_second_room0"
+		},
+		"output": {
+			
+		},
+		"parent": null,
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "false",
+		"description": null,
+		"dialog_node": "dragon_second_room",
+		"previous_sibling": "dragon_first_room"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "dragon_second_room1TakeSwordeffect0"
+		},
+		"output": {
+			"text": "You did TakeSword"
+		},
+		"parent": "dragon_second_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('sword') && input.text.contains('TakeSword')",
+		"description": null,
+		"dialog_node": "dragon_second_room1TakeSword",
+		"previous_sibling": "dragon_second_room1goback"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "dragon_second_room1TakeTreasureeffect0"
+		},
+		"output": {
+			"text": "You did TakeTreasure"
+		},
+		"parent": "dragon_second_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('woken_dragon') && input.text.contains('TakeTreasure')",
+		"description": null,
+		"dialog_node": "dragon_second_room1TakeTreasure",
+		"previous_sibling": "dragon_second_room1TakeSword"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "dragon_second_room2BegForMercyeffect0"
+		},
+		"output": {
+			"text": "You did BegForMercy"
+		},
+		"parent": "dragon_second_room2",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true && input.text.contains('BegForMercy')",
+		"description": null,
+		"dialog_node": "dragon_second_room2BegForMercy",
+		"previous_sibling": "dragon_second_room2Fight"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "dragon_second_room2Fighteffect0"
+		},
+		"output": {
+			"text": "You did Fight"
+		},
+		"parent": "dragon_second_room2",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true && input.text.contains('Fight')",
+		"description": null,
+		"dialog_node": "dragon_second_room2Fight",
+		"previous_sibling": "dragon_second_room2RunAway"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "dragon_second_room2RunAwayeffect0"
+		},
+		"output": {
+			"text": "You did RunAway"
+		},
+		"parent": "dragon_second_room2",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true && input.text.contains('RunAway')",
+		"description": null,
+		"dialog_node": "dragon_second_room2RunAway",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "entrance0"
+		},
+		"output": {
+			
+		},
+		"parent": null,
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "false",
+		"description": null,
+		"dialog_node": "entrance",
+		"previous_sibling": "introduction"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "key_room0"
+		},
+		"output": {
+			
+		},
+		"parent": null,
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "false",
+		"description": null,
+		"dialog_node": "key_room",
+		"previous_sibling": "dragon_second_room"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "key_room0PickKeyeffect0"
+		},
+		"output": {
+			"text": "You did PickKey"
+		},
+		"parent": "key_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('key') && input.text.contains('PickKey')",
+		"description": null,
+		"dialog_node": "key_room0PickKey",
+		"previous_sibling": "key_room0godeeper"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "rabble_room0"
+		},
+		"output": {
+			
+		},
+		"parent": null,
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "false",
+		"description": null,
+		"dialog_node": "rabble_room",
+		"previous_sibling": "trap_room"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "rabble_room1ClearRabbleeffect0"
+		},
+		"output": {
+			"text": "You did ClearRabble"
+		},
+		"parent": "rabble_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('rabble_cleared') && input.text.contains('ClearRabble')",
+		"description": null,
+		"dialog_node": "rabble_room1ClearRabble",
+		"previous_sibling": "rabble_room1goright"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "trap_room0"
+		},
+		"output": {
+			
+		},
+		"parent": null,
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "false",
+		"description": null,
+		"dialog_node": "trap_room",
+		"previous_sibling": "entrance"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "trap_room1StepOnTrapDooreffect0"
+		},
+		"output": {
+			"text": "You did StepOnTrapDoor"
+		},
+		"parent": "trap_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true && input.text.contains('StepOnTrapDoor')",
+		"description": null,
+		"dialog_node": "trap_room1StepOnTrapDoor",
+		"previous_sibling": "trap_room1goleft"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "treasure_room0"
+		},
+		"output": {
+			
+		},
+		"parent": null,
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "false",
+		"description": null,
+		"dialog_node": "treasure_room",
+		"previous_sibling": "key_room"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "treasure_room0OpenChesteffect0"
+		},
+		"output": {
+			"text": "You did OpenChest"
+		},
+		"parent": "treasure_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('gold') && input.text.contains('OpenChest')",
+		"description": null,
+		"dialog_node": "treasure_room0OpenChest",
+		"previous_sibling": "treasure_room0ascend"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "troll_room0"
+		},
+		"output": {
+			
+		},
+		"parent": null,
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "false",
+		"description": null,
+		"dialog_node": "troll_room",
+		"previous_sibling": "behind_wardrobe_room"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "troll_room1FightTrolleffect0"
+		},
+		"output": {
+			"text": "You did FightTroll"
+		},
+		"parent": "troll_room1",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true && input.text.contains('FightTroll')",
+		"description": null,
+		"dialog_node": "troll_room1FightTroll",
+		"previous_sibling": "troll_room1run"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "troll_room2FightTrolleffect0"
+		},
+		"output": {
+			"text": "You did FightTroll"
+		},
+		"parent": "troll_room2",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true && input.text.contains('FightTroll')",
+		"description": null,
+		"dialog_node": "troll_room2FightTroll",
+		"previous_sibling": "troll_room2GiveGold"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "troll_room2GiveGoldeffect0"
+		},
+		"output": {
+			"text": "You did GiveGold"
+		},
+		"parent": "troll_room2",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "context.has('gold') && input.text.contains('GiveGold')",
+		"description": null,
+		"dialog_node": "troll_room2GiveGold",
+		"previous_sibling": null
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "troll_room3KickTrolleffect0"
+		},
+		"output": {
+			"text": "You did KickTroll"
+		},
+		"parent": "troll_room3",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "true && input.text.contains('KickTroll')",
+		"description": null,
+		"dialog_node": "troll_room3KickTroll",
+		"previous_sibling": "troll_room3goup"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "wardrobe_room0"
+		},
+		"output": {
+			
+		},
+		"parent": null,
+		"context": {
+			
+		},
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T18:53:11.401Z",
+		"metadata": null,
+		"conditions": "false",
+		"description": null,
+		"dialog_node": "wardrobe_room",
+		"previous_sibling": "rabble_room"
+	},
+	{
+		"go_to": {
+			"return": null,
+			"selector": "condition",
+			"dialog_node": "wardrobe_room0OpenWardrobeeffect0"
+		},
+		"output": {
+			"text": "You did OpenWardrobe"
+		},
+		"parent": "wardrobe_room0",
+		"context": null,
+		"created": "2016-12-09T17:36:49.330Z",
+		"updated": "2016-12-09T17:36:49.330Z",
+		"metadata": null,
+		"conditions": "!context.has('openned_wardrobe') && input.text.contains('OpenWardrobe')",
+		"description": null,
+		"dialog_node": "wardrobe_room0OpenWardrobe",
+		"previous_sibling": "wardrobe_room0goright"
+	}],
+	"workspace_id": "7b1091f8-306a-415c-93bb-c1622420d81c",
+	"counterexamples": []
+}
