@@ -1,0 +1,259 @@
+{
+  "name": "System Entity Question Demo",
+  "intents": [
+    {
+      "intent": "description",
+      "examples": [
+        {
+          "text": "Is there a system entity for times?"
+        },
+        {
+          "text": "Tell me about @sys-percentage"
+        },
+        {
+          "text": "What does @sys-number do?"
+        },
+        {
+          "text": "What is the sys-time entity for?"
+        },
+        {
+          "text": "Which system entity could help find dates?"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "example",
+      "examples": [
+        {
+          "text": "Can you give me an example?"
+        },
+        {
+          "text": "Can you show me?"
+        },
+        {
+          "text": "Can you show me an example for @sys-percentage?"
+        },
+        {
+          "text": "How would that work?"
+        },
+        {
+          "text": "What would sys-time match?"
+        },
+        {
+          "text": "Would @sys-number match ten?"
+        }
+      ],
+      "description": null
+    }
+  ],
+  "entities": [
+    {
+      "type": null,
+      "entity": "sys-currency",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "sys-date",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "sys-number",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "sys-percentage",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "system-entities",
+      "source": null,
+      "values": [
+        {
+          "value": "sys-currency",
+          "synonyms": [
+            "currencies",
+            "currency",
+            "@sys-currency"
+          ]
+        },
+        {
+          "value": "sys-date",
+          "synonyms": [
+            "date",
+            "dates",
+            "@sys-date"
+          ]
+        },
+        {
+          "value": "sys-number",
+          "synonyms": [
+            "number",
+            "numbers",
+            "@sys-number"
+          ]
+        },
+        {
+          "value": "sys-percentage",
+          "synonyms": [
+            "percentage",
+            "percentages",
+            "@sys-percentage"
+          ]
+        },
+        {
+          "value": "sys-time",
+          "synonyms": [
+            "@sys-time",
+            "time",
+            "times"
+          ]
+        }
+      ],
+      "open_list": false,
+      "description": null
+    },
+    {
+      "type": null,
+      "entity": "sys-time",
+      "source": "system.entities",
+      "values": [],
+      "open_list": false,
+      "description": null
+    }
+  ],
+  "language": "en",
+  "description": "Simple context variable lookup sample to answer questions about system entities.",
+  "dialog_nodes": [
+    {
+      "go_to": null,
+      "output": null,
+      "parent": null,
+      "context": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_2_1489424684381",
+      "previous_sibling": "node_8_1489426603257"
+    },
+    {
+      "go_to": null,
+      "output": {},
+      "parent": null,
+      "context": null,
+      "conditions": "conversation_start",
+      "description": null,
+      "dialog_node": "node_1_1489424668696",
+      "previous_sibling": null
+    },
+    {
+      "go_to": null,
+      "output": {},
+      "parent": null,
+      "context": null,
+      "conditions": "$entity",
+      "description": null,
+      "dialog_node": "node_8_1489426603257",
+      "previous_sibling": "node_7_1489426584919"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_8_1489426603257"
+      },
+      "output": {},
+      "parent": null,
+      "context": {
+        "entity": "<? @system-entities ?>"
+      },
+      "conditions": "@system-entities",
+      "description": null,
+      "dialog_node": "node_7_1489426584919",
+      "previous_sibling": "node_1_1489424668696"
+    },
+    {
+      "type": "response_condition",
+      "go_to": null,
+      "output": {
+        "text": [
+          "System entities are commonly used entities provided by IBM",
+          "Ask about how you can use these entities to identify times, dates, currencies, percentages and numbers"
+        ]
+      },
+      "parent": "node_1_1489424668696",
+      "context": {
+        "examples": {
+          "sys-date": "\\@sys-date would match 2017-11-05 in 'Remember remember the fifth of November'. It can also match 'Friday', 'today', '5th Nov', etc.",
+          "sys-time": "\\@sys-time would match 10:00:00 in 'remind me at 10am'. It can also match 'now', '10:30', '5pm', and so on",
+          "sys-number": "\\@sys-number will match 2 in 'Two teas please'. It would also match digits like '21' and '3.14'",
+          "sys-currency": "\\@sys-currency matches 10 in 'There is a \\$10 minimum order'.",
+          "sys-percentage": "\\@sys-percentage would match 15 in '15% off everything'.  '15 percent' is also recognised."
+        },
+        "descriptions": {
+          "sys-date": "The \\@sys-date entity identifies dates in the input text",
+          "sys-time": "The \\@sys-time entity identifies times in the input text",
+          "sys-number": "The \\@sys-number entity identifies numbers in the input text",
+          "sys-currency": "The \\@sys-currency entity identifies currency values in the input text",
+          "sys-percentage": "The \\@sys-percentage entity identifies percentages in the input text"
+        }
+      },
+      "conditions": null,
+      "description": null,
+      "dialog_node": "node_3_1489424798884",
+      "previous_sibling": null
+    },
+    {
+      "type": "response_condition",
+      "go_to": null,
+      "output": {
+        "text": {
+          "values": [
+            "<? $descriptions[$entity] ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1489426603257",
+      "context": null,
+      "conditions": " #description",
+      "description": null,
+      "dialog_node": "node_9_1489426611381",
+      "previous_sibling": null
+    },
+    {
+      "type": "response_condition",
+      "go_to": null,
+      "output": {
+        "text": {
+          "values": [
+            "<? $examples[$entity] ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1489426603257",
+      "context": null,
+      "conditions": " #example",
+      "description": null,
+      "dialog_node": "node_10_1489426624969",
+      "previous_sibling": "node_9_1489426611381"
+    }
+  ],
+  "counterexamples": []
+}
